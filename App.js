@@ -10,6 +10,7 @@ const nav = document.querySelector("nav");
 const inputName = document.querySelector("input[type= text]");
 const select = document.querySelector("select");
 const form = document.querySelector("form");
+const boxes = document.querySelectorAll(".box");
 let language;
 let pseudo;
 const ring = () => {
@@ -17,7 +18,7 @@ const ring = () => {
   audio.src = "./Enter.mp3";
   audio.play();
 };
-console.log();
+console.log(boxes);
 
 questionContainer.addEventListener("click", () => {
   questionContainer.classList.toggle("question-clicked");
@@ -88,4 +89,14 @@ form.addEventListener("submit", (e) => {
   } else {
     alert("Veuillez acceptez les CGV !");
   }
+});
+
+window.addEventListener("load", (e) => {
+  console.log("loaded");
+});
+
+boxes.forEach((box) => {
+  box.addEventListener("click", () => {
+    box.style.transform = "scale(0.85) ";
+  });
 });
