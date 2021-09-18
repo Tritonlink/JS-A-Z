@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap");
+
+body {
+  background: wheat;
+  min-height: 300vh;
+}
+nav {
+  background: #2626928a;
+  min-height: 40px;
+  position: relative;
+  transform: translateY(-200px);
+  transition: 0.25s;
+  z-index: 20;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav::after {
+  content: "";
+  background: radial-gradient(circle closest-side, white 0%, transparent 100%);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+nav:hover::after {
+  opacity: 1;
+}
+.top {
+  background: url(./bg.jpg) center/cover;
+  min-height: 100vh;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+h2 {
+  padding-top: 100px;
+  font-family: "Grey Qo", serif;
+  font-size: 4.2rem;
+  color: #eedfc4;
+}
+.houses-presentation {
+  background: whitesmoke;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.house1 {
+  text-align: left;
+  position: relative;
+  padding: 30px;
+}
+#h1 {
+  position: absolute;
+  background: #8e8eb685;
+  top: 40%;
+  left: 20%;
+  min-height: 50px;
+  border-radius: 7px;
+  max-width: 400px;
+}
+.house2 {
+  text-align: right;
+  position: relative;
+  padding: 30px;
+}
+#h2 {
+  position: absolute;
+  background: #bdbb3db0;
+  top: 40%;
+  right: 20%;
+  min-height: 50px;
+  border-radius: 7px;
+  max-width: 400px;
+  text-align: left;
+}
+.house3 {
+  text-align: left;
+  position: relative;
+  padding: 30px;
+}
+#h3 {
+  position: absolute;
+  background: #3dbd77b0;
+  top: 40%;
+  left: 20%;
+  min-height: 50px;
+  border-radius: 7px;
+  max-width: 400px;
+}

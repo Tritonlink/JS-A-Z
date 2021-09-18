@@ -100,3 +100,20 @@ boxes.forEach((box) => {
     box.style.transform = "scale(0.85) ";
   });
 });
+
+questionContainer.addEventListener("click", (e) => {
+  e.stopPropagation();
+  alert("test !");
+});
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("chacccc");
+  },
+  true
+);
+
+window.addEventListener("mousemove", (e) => {
+  nav.style.setProperty("--x", e.layerX + "px");
+  nav.style.setProperty("--y", e.layerY + "px");
+});
